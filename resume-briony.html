@@ -11,16 +11,13 @@ function toggleMenu(number){
 window.onload=function(){
     var box=document.getElementById("selfie");
     box.addEventListener("mouseover",function(){
-        this.style.opacity=1; 
+        this.style.opacity=0.5; 
     });
     box.addEventListener("mouseout",function(){
-        this.style.opacity=0.5;
+        this.style.opacity=1;
     });
 };
-function start(){
-    var text=document.getElementById("cutebaby");
-    text.classList.add("effect");
-}
+
 </script>
 <style type="text/css">
 .head{
@@ -41,25 +38,12 @@ function start(){
     opacity:0.5;transition:opacity 2s ;
     border-radius:100%;
 }
-.effect{
-animation:blink 1s infinite ;
-}
-@keyframes blink{
-    0%{opacity:0}
-    50%{opacity:1}
-    100%{opacity:0} 
-}
 
 </style>
 </head>
 <body style="background-color: rgb(195, 202, 245);">
     <div class="head">軟體工程師扶持計畫-邱愉謙的申請表</div>
-    <div>
-        <img id="selfie" src="selfie.jpg" width="130px" height="180px" class="photo" style="position: absolute;top:80px;left:50px;"/>
-        <span style="position: absolute;top:50px;left:65px">可以滑我看得更清楚喔</span>
-        <img id="cutebaby" src="cutebaby.jpg" width="130px" height="180px" class="photo"style="position: absolute;bottom:80px;right:50px;"/>
-        <button style="position: absolute;bottom:50px;right:50px;" onclick="start();">點我</button>
-    </div>
+    
         <div class="content">    
         <h3  style="padding-left:15px" onclick="toggleMenu(1);">一、兩百字內的個人簡介 </h3>
             <div id="menu-1" class="hide">
@@ -68,6 +52,8 @@ animation:blink 1s infinite ;
             <br>喜歡閱讀，閱讀類型不拘，床頭總是放兩三本書，把閱讀當作睡前催眠和下班通車逃避工作後胡思亂想的消遣。
             <br>喜歡運動、爬山、旅行、跟大自然接觸的一切，近期因為氣候變遷所以關注環保(從自身做起)。
             <br>喜歡烘焙，曾經為了烘焙改變人生跑道，在大學時從傳播系轉系到食品科學系。<br>目前新增一項愛好……看彭彭老師的影片學習寫程式。
+        
+                <img id="selfie" src="selfie.jpg" width="130px" height="180px" class="photo" style="position: absolute;top:80px;right:50px;"/>
             </div>
         
             <h3 onclick="toggleMenu(2);"> 二、為什麼想成為前端、後端、或全端工程師？ </h3>
